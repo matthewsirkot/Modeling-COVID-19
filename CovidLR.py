@@ -85,6 +85,19 @@ print('Mean squared error: %.2f'% mean_squared_error(yval_scale, ypred))
 print('Coefficient of determination: %.2f'% r2_score(yval_scale, ypred))
 
 
+predictions = scaler_y.inverse_transform(ypred)
+
+print(mean_absolute_error(y_val, predictions))
+print(mean_squared_error(y_val, predictions))
+print(math.sqrt(mean_squared_error(y_val, predictions)))
+print(np.mean(predictions))
+
+plt.plot(predictions, 'ro')
+plt.ylabel('deaths')
+plt.xlabel('time')
+plt.suptitle('Predicted (Linear Regression)')
+plt.show()
+
 
 
 

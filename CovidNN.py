@@ -105,3 +105,16 @@ print(math.sqrt(mean_squared_error(y_val, predictions)))
 
 print(np.mean(y_val))
 print(np.mean(predictions))
+
+
+plt.plot(predictions, 'ro')
+plt.ylabel('deaths')
+plt.xlabel('time')
+plt.suptitle('Predicted (Neural Network)')
+plt.show()
+
+plt.plot(y_val, 'ro')
+plt.ylabel('deaths')
+plt.xlabel('time')
+plt.suptitle('Actual')
+plt.show()
